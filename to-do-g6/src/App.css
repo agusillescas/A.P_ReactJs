@@ -1,0 +1,21 @@
+/* Reseteo css con "npm install normalize.css"*/
+@import 'normalize.css';
+
+/* Ahora si sigo con mis estilos */
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  color: rgb(245, 204, 160);
+  background: linear-gradient(to bottom, rgb(107, 36, 12), rgb(153, 77, 28), rgb(228, 143, 69));
+}
+
+#tarea {
+  background-color: rgb(245, 204, 160);
+  color: black;
+}
+
+#lista {
+  display: flex;
+  align-content: center;
+}

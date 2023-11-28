@@ -1,0 +1,31 @@
+.navbar {
+    background: linear-gradient(to right, rgb(107, 36, 12), rgb(153, 77, 28));
+    color: rgb(245, 204, 160);
+    padding: 1rem;
+    border-bottom: 0.2em solid rgb(228, 143, 69);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-list li {
+    margin-left: 1rem;
+    cursor: pointer;
+}
