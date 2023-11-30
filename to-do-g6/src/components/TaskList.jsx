@@ -1,13 +1,22 @@
-import React from "react";
+import React from 'react';
+import TaskItem from './TaskItem';
 
-function TaskList(params) {
+const TaskList = ({ tasks, onComplete, onEdit, onDelete }) => {
     return (
-        < form id="lista">
-            <h2>Lista de Tareas</h2>
-            <input type="text" placeholder="Nueva tarea" />
-            <button id="tarea">Agregar</button>
-        </form >
+        <div className="tareas">
+            <ul>
+                {tasks.map((task) => (
+                    <TaskItem
+                        key={task.id}
+                        task={task}
+                        onComplete={onComplete}
+                        onEdit={onEdit}
+                        onDelete={onDelete}
+                    />
+                ))}
+            </ul>
+        </div>
     );
-}
+};
 
 export default TaskList;
