@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TaskForm from '../src/components/TaskForm';
 import TaskList from '../src/components/TaskList';
+import Navbar from '../src/components/Navbar/Navbar';
 import './App.css';
 
 const App = () => {
@@ -41,26 +42,29 @@ const App = () => {
   }, [tasks]);
 
   return (
-    <div className='contenedor'>
-      <section className='contenedor-tareas'>
-        <h2>Tareas</h2>
-        <TaskForm onAddTask={handleAddTask} />
-        <TaskList
-          tasks={tasks}
-          onComplete={handleCompleteTask}
-          onEdit={handleEditTask}
-          onDelete={handleDeleteTask}
-        />
-      </section>
-      <section className='contenedor-completadas'>
-        <h2>Tareas Completadas</h2>
-        <ul>
-          {completedTasks.map((completedTask) => (
-            <li key={completedTask.id}>{completedTask.nombre}</li>
-          ))}
-        </ul>
-      </section>
-    </div >
+    <>
+      <Navbar />
+      <div className='contenedor'>
+        <section className='contenedor-tareas'>
+          <h2>Tareas</h2>
+          <TaskForm onAddTask={handleAddTask} />
+          <TaskList
+            tasks={tasks}
+            onComplete={handleCompleteTask}
+            onEdit={handleEditTask}
+            onDelete={handleDeleteTask}
+          />
+        </section>
+        <section className='contenedor-completadas'>
+          <h2>Tareas Completadas</h2>
+          <ul>
+            {completedTasks.map((completedTask) => (
+              <li key={completedTask.id}>{completedTask.nombre}</li>
+            ))}
+          </ul>
+        </section>
+      </div >
+    </>
   );
 };
 

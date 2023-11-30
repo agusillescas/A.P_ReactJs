@@ -1,0 +1,40 @@
+.navbar {
+    padding: 0.5rem;
+    border-bottom: 0.2em solid rgba(240, 89, 65, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-weight: bold;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.50);
+}
+
+a {
+    text-decoration: none;
+}
+
+:link {
+    color: rgb(240, 89, 65);
+}
+
+:visited {
+    color: rgb(240, 89, 65);
+}
+
+a:hover {
+    color: rgba(240, 89, 65, 0.5);
+    ;
+}

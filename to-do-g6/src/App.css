@@ -5,6 +5,7 @@
 html {
   scroll-behavior: smooth;
   height: 100vh;
+  font-family: sans-serif;
   color: rgb(240, 89, 65);
   background: radial-gradient(rgb(190, 49, 68), rgb(135, 35, 65), rgb(34, 9, 44));
 }
@@ -17,6 +18,15 @@ input {
   margin-right: 1em;
 }
 
+input:focus {
+  outline: 0.1em solid rgb(224, 105, 86);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+input:hover {
+  border: 0.1em solid rgba(240, 89, 65, 1);
+}
+
 .contenedor {
   background: radial-gradient(rgb(135, 35, 65), rgb(34, 9, 44));
   box-shadow: 0.8em 0.8em 1.6em rgba(0, 0, 0, 0.70);
@@ -26,7 +36,7 @@ input {
   border: 0.1em solid rgba(240, 89, 65, 0.65);
   margin-right: 5%;
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 60vh;
@@ -47,8 +57,18 @@ input {
   justify-content: start;
 }
 
+.contenedor-completadas ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
 .contenedor-tareas ul {
   list-style: circle;
+  padding-left: 1em;
+}
+
+.contenedor-completadas li:before {
+  content: "✔ ";
 }
 
 .add,
@@ -78,7 +98,7 @@ input {
 .contenedor-botones {
   display: inline-flex;
   justify-content: right;
-  width: 25%;
+  width: 20%;
 }
 
 .tareas {
@@ -94,4 +114,21 @@ input {
 
 .contenedor-botones button {
   display: inline-block;
+}
+
+@media (max-width: 720px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-tareas {
+    border-right: none;
+    border-bottom: 0.1em solid rgba(240, 89, 65, 0.65);
+  }
+
+  h2 {
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.50);
+    ;
+  }
 }
